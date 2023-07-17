@@ -2,7 +2,7 @@ from tkinter import *
 
 root=Tk()
 root.title("Profits")
-root.geometry("500x500")
+root.geometry("700x700")
 root.configure(background="light blue")
 
 month = ("January", "February", "March", "April", "May", 
@@ -12,17 +12,23 @@ month = ("January", "February", "March", "April", "May",
 profits = (20000, 45000, 78000, 97000, 12000, 456000, 65000,
            54000, 10000, 30000, 70000, 90000)
 
+label5 = Label(root, text="January, February, March, April, May, June, July, August, September, October, November, December")
+label5.place(relx=0.1, rely=0.2)
+
+label1 = Label(root, text="20000, 45000, 78000, 97000, 12000, 456000, 65000, 54000, 10000, 30000, 70000, 90000")
+label1.place(relx=0.1, rely=0.3)
+
 label1 = Label(root, text="")
-label1.place(relx=0.4, rely=0.4)
+label1.place(relx=0.4, rely=0.5, anchor = CENTER)
 
 label2 = Label(root, text="")
-label2.place(relx=0.1, rely=0.5)
+label2.place(relx=0.2, rely=0.6)
 
 label3 = Label(root, text="")
-label3.place(relx=0.4, rely=0.6)
+label3.place(relx=0.4, rely=0.8, anchor = CENTER)
 
 label4 = Label(root, text="")
-label4.place(relx=0.1, rely=0.7)
+label4.place(relx=0.2, rely=0.9)
 
 def maxs():
     max_profit = max(profits)
@@ -39,9 +45,9 @@ def mins():
     label4["text"] = "The minimum profit of " + str(min_profit) + " was recorded in the month of " + str(min_profit_month)
 
 btn1 = Button(root, text="Show Max Profit: ", command = maxs)
-btn1.place(relx= 0.4,rely = 0.3,)
+btn1.place(relx= 0.5,rely = 0.4, anchor = CENTER)
 
 btn2 = Button(root, text="Show Min Profit: ", command = mins)
-btn2.place(relx= 0.4,rely = 0.2,)
+btn2.place(relx= 0.5,rely = 0.7, anchor = CENTER)
 
 root.mainloop()
